@@ -1,5 +1,7 @@
 # Command Line Whack-a-Mole
 
+[![CI](https://github.com/sakamotodesu/cmdpanic/actions/workflows/ci.yml/badge.svg)](https://github.com/sakamotodesu/cmdpanic/actions/workflows/ci.yml)
+
 A simple command-line game where you catch moles (🐊) that appear in different holes. Test your reflexes and see how many moles you can catch within the time limit!
 
 ## Prerequisites
