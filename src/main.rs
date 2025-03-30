@@ -1,5 +1,5 @@
 use crossterm::{
-    cursor::{Hide, Show, MoveTo},
+    cursor::{Hide, MoveTo, Show},
     event::{self, Event, KeyCode},
     terminal::{self, Clear, ClearType},
     QueueableCommand,
@@ -110,7 +110,7 @@ fn main() -> std::io::Result<()> {
     println!("Each round is 2 seconds, total time limit is 10 seconds.");
     println!("Press ESC to exit.");
     println!("Press Enter to start...");
-    
+
     // Enterキーを待つ
     std::io::stdin().read_line(&mut String::new()).unwrap();
 
