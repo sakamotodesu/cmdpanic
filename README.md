@@ -4,17 +4,24 @@
 
 A simple command-line game where you catch moles (🐊) that appear in different holes. Test your reflexes and see how many moles you can catch within the time limit!
 
-## Prerequisites
+## Installation
 
-- Rust (latest stable version)
-- Cargo (comes with Rust)
+### Using Homebrew (Recommended)
 
-## Building
+```bash
+# Add the tap
+brew tap sakamotodesu/cmdpanic https://github.com/sakamotodesu/homebrew-cmdpanic
+
+# Install the game
+brew install sakamotodesu/cmdpanic/cmdpanic
+```
+
+### Building from Source
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/sakamotodesu/cmdpanic.git
+cd cmdpanic
 ```
 
 2. Build the project:
