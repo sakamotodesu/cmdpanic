@@ -48,7 +48,7 @@ impl Game {
                 write!(stdout, " ")?;
             }
         }
-        write!(stdout, "\n")?;
+        writeln!(stdout)?;
 
         // スコアと残り時間の表示
         stdout.queue(MoveTo(0, 1))?;
@@ -56,9 +56,9 @@ impl Game {
         let round_remaining = self.round_time_limit.as_secs_f32() - round_elapsed.as_secs_f32();
         let game_elapsed = self.game_start_time.elapsed();
         let game_remaining = self.game_time_limit.as_secs_f32() - game_elapsed.as_secs_f32();
-        write!(
+        writeln!(
             stdout,
-            "Score: {}  Round Time: {:.1}s  Total Time: {:.1}s\n",
+            "Score: {}  Round Time: {:.1}s  Total Time: {:.1}s",
             self.score, round_remaining, game_remaining
         )?;
 
@@ -133,7 +133,7 @@ fn main() -> std::io::Result<()> {
                     }
                     KeyCode::Char(c) => {
                         if let Some(num) = c.to_digit(10) {
-                            if num >= 1 && num <= 5 {
+                            if (1..=5).contains(&num) {
                                 if game.check_input(num as u8) {
                                     println!("Correct!");
                                     game.next_round();
