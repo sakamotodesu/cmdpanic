@@ -34,6 +34,31 @@ cargo build --release
 cargo run --release
 ```
 
+## Development
+
+### Creating a New Release
+
+1. Create and push a new tag:
+```bash
+# Create a new tag
+git tag v0.1.0  # Replace with your version number
+
+# Push the tag to GitHub
+git push origin v0.1.0
+```
+
+2. Update the Homebrew formula:
+```bash
+# Download the release tarball
+curl -L https://github.com/sakamotodesu/cmdpanic/archive/refs/tags/v0.1.0.tar.gz -o cmdpanic-0.1.0.tar.gz
+
+# Calculate SHA256
+shasum -a 256 cmdpanic-0.1.0.tar.gz
+
+# Update the SHA256 in homebrew-cmdpanic repository
+# Edit cmdpanic.rb and update the sha256 value
+```
+
 ## How to Play
 
 1. When you start the game, you'll see a welcome screen with instructions
